@@ -52,7 +52,7 @@ func (d *Draft) getID(sch interface{}) string {
 	if !ok {
 		return ""
 	}
-	if _, ok := m["$ref"]; ok && d.version <= 7 {
+	if _, ok := m["$ref"]; ok && d.version < 7 {
 		// $ref prevents a sibling id from changing the base uri
 		return ""
 	}
