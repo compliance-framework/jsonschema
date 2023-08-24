@@ -274,7 +274,7 @@
     "description": "unrecognized vocab",
     "schema": {
       "$vocabulary": {
-        "https://github.com/santhosh-tekuri": true
+        "https://github.com/compliance-framework": true
       }
     }
   },

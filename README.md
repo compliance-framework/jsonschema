@@ -1,10 +1,10 @@
 # jsonschema v5.3.1
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![GoDoc](https://godoc.org/github.com/santhosh-tekuri/jsonschema?status.svg)](https://pkg.go.dev/github.com/santhosh-tekuri/jsonschema/v5)
-[![Go Report Card](https://goreportcard.com/badge/github.com/santhosh-tekuri/jsonschema/v5)](https://goreportcard.com/report/github.com/santhosh-tekuri/jsonschema/v5)
-[![Build Status](https://github.com/santhosh-tekuri/jsonschema/actions/workflows/go.yaml/badge.svg?branch=master)](https://github.com/santhosh-tekuri/jsonschema/actions/workflows/go.yaml)
-[![codecov](https://codecov.io/gh/santhosh-tekuri/jsonschema/branch/master/graph/badge.svg?token=JMVj1pFT2l)](https://codecov.io/gh/santhosh-tekuri/jsonschema)
+[![GoDoc](https://godoc.org/github.com/compliance-framework/jsonschema?status.svg)](https://pkg.go.dev/github.com/compliance-framework/jsonschema/v5)
+[![Go Report Card](https://goreportcard.com/badge/github.com/compliance-framework/jsonschema/v5)](https://goreportcard.com/report/github.com/compliance-framework/jsonschema/v5)
+[![Build Status](https://github.com/compliance-framework/jsonschema/actions/workflows/go.yaml/badge.svg?branch=master)](https://github.com/compliance-framework/jsonschema/actions/workflows/go.yaml)
+[![codecov](https://codecov.io/gh/compliance-framework/jsonschema/branch/master/graph/badge.svg?token=JMVj1pFT2l)](https://codecov.io/gh/compliance-framework/jsonschema)
 
 Package jsonschema provides json-schema compilation and validation.
 
@@ -18,7 +18,7 @@ Package jsonschema provides json-schema compilation and validation.
    [draft-6](https://json-schema.org/specification-links.html#draft-6),
    [draft-4](https://json-schema.org/specification-links.html#draft-4)
  - fully compliant with [JSON-Schema-Test-Suite](https://github.com/json-schema-org/JSON-Schema-Test-Suite), (excluding some optional)
-   - list of optional tests that are excluded can be found in schema_test.go(variable [skipTests](https://github.com/santhosh-tekuri/jsonschema/blob/master/schema_test.go#L24))
+   - list of optional tests that are excluded can be found in schema_test.go(variable [skipTests](https://github.com/compliance-framework/jsonschema/blob/master/schema_test.go#L24))
  - validates schemas against meta-schema
  - full support of remote references
  - support of recursive references between schemas
@@ -29,22 +29,22 @@ Package jsonschema provides json-schema compilation and validation.
  - supports enabling format and content Assertions in draft2019-09 or above
    - change `Compiler.AssertFormat`, `Compiler.AssertContent` to `true`
  - compiled schema can be introspected. easier to develop tools like generating go structs given schema
- - supports user-defined keywords via [extensions](https://pkg.go.dev/github.com/santhosh-tekuri/jsonschema/v5/#example-package-Extension)
- - implements following formats (supports [user-defined](https://pkg.go.dev/github.com/santhosh-tekuri/jsonschema/v5/#example-package-UserDefinedFormat))
+ - supports user-defined keywords via [extensions](https://pkg.go.dev/github.com/compliance-framework/jsonschema/v5/#example-package-Extension)
+ - implements following formats (supports [user-defined](https://pkg.go.dev/github.com/compliance-framework/jsonschema/v5/#example-package-UserDefinedFormat))
    - date-time, date, time, duration, period (supports leap-second)
    - uuid, hostname, email
    - ip-address, ipv4, ipv6
    - uri, uriref, uri-template(limited validation)
    - json-pointer, relative-json-pointer
    - regex, format
- - implements following contentEncoding (supports [user-defined](https://pkg.go.dev/github.com/santhosh-tekuri/jsonschema/v5/#example-package-UserDefinedContent))
+ - implements following contentEncoding (supports [user-defined](https://pkg.go.dev/github.com/compliance-framework/jsonschema/v5/#example-package-UserDefinedContent))
    - base64
- - implements following contentMediaType (supports [user-defined](https://pkg.go.dev/github.com/santhosh-tekuri/jsonschema/v5/#example-package-UserDefinedContent))
+ - implements following contentMediaType (supports [user-defined](https://pkg.go.dev/github.com/compliance-framework/jsonschema/v5/#example-package-UserDefinedContent))
    - application/json
- - can load from files/http/https/[string](https://pkg.go.dev/github.com/santhosh-tekuri/jsonschema/v5/#example-package-FromString)/[]byte/io.Reader (supports [user-defined](https://pkg.go.dev/github.com/santhosh-tekuri/jsonschema/v5/#example-package-UserDefinedLoader))
+ - can load from files/http/https/[string](https://pkg.go.dev/github.com/compliance-framework/jsonschema/v5/#example-package-FromString)/[]byte/io.Reader (supports [user-defined](https://pkg.go.dev/github.com/compliance-framework/jsonschema/v5/#example-package-UserDefinedLoader))
 
 
-see examples in [godoc](https://pkg.go.dev/github.com/santhosh-tekuri/jsonschema/v5)
+see examples in [godoc](https://pkg.go.dev/github.com/compliance-framework/jsonschema/v5)
 
 The schema is compiled against the version specified in `$schema` property.
 If "$schema" property is missing, it uses latest draft which currently implemented
@@ -62,7 +62,7 @@ This package supports loading json-schema from filePath and fileURL.
 To load json-schema from HTTPURL, add following import:
 
 ```go
-import _ "github.com/santhosh-tekuri/jsonschema/v5/httploader"
+import _ "github.com/compliance-framework/jsonschema/v5/httploader"
 ```
 
 ## Rich Errors
@@ -183,7 +183,7 @@ Prints:
 
 ## CLI
 
-to install `go install github.com/santhosh-tekuri/jsonschema/cmd/jv@latest`
+to install `go install github.com/compliance-framework/jsonschema/cmd/jv@latest`
 
 ```bash
 jv [-draft INT] [-output FORMAT] [-assertformat] [-assertcontent] <json-schema> [<json-or-yaml-doc>]...
