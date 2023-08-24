@@ -11,8 +11,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/santhosh-tekuri/jsonschema/v5"
-	_ "github.com/santhosh-tekuri/jsonschema/v5/httploader"
+	"github.com/compliance-framework/jsonschema/v5"
+	_ "github.com/compliance-framework/jsonschema/v5/httploader"
 	"gopkg.in/yaml.v3"
 )
 
